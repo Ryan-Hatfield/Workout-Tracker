@@ -42,6 +42,7 @@ header {
 
 header h1 {
   transform: skewX(-2deg);
+  text-align: center;
 }
 
 select {

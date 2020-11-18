@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 //---Setting up Express
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
@@ -22,7 +22,7 @@ mongoose.connect(
 );
 //---routes
 require("./routes/api-routes")(app);
-require("./routes/htmlRoutes")(app);
+require("./routes/html-routes")(app);
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
